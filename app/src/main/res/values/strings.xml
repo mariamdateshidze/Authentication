@@ -1,0 +1,9 @@
+<resources>
+    <string name="app_name">Authetication</string>
+    <string name="log_in">Log In</string>
+    <string name="sign_up">sign up</string>
+    <string name="email">email</string>
+    <string name="password">password</string>
+    <string name="repeat_password">Repeat Password</string>
+    <string name="enter_your_email">enter your email</string>
+</resources>
