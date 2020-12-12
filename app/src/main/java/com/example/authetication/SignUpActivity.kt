@@ -37,6 +37,7 @@ class SignUpActivity : AppCompatActivity() {
 
         if (email.isNotEmpty() && password.isNotEmpty() && repeatPassword.isNotEmpty()){
             if (password==repeatPassword){
+               if (Patterns.EMAIL_ADDRESS.matcher(email).matches()) {
                 progressBar.visibility= View.VISIBLE
                 signUpButton.isClickable=false
                 auth.createUserWithEmailAndPassword(email, password)
@@ -59,7 +60,10 @@ class SignUpActivity : AppCompatActivity() {
                         // ...
                     }
 
-
+                }else{
+                   Toast.makeText(this, "email format is not right",  Toast.LENGTH_SHORT).show()
+               
+               } 
             }else{
                 Toast.makeText(this, "Please fill correctly",  Toast.LENGTH_SHORT).show()
             }
